@@ -4,22 +4,22 @@ struct MainView: View {
     var body: some View {
         TabView {
             GamesView()
-                .badge(10)
+                .badge(0)
                 .tabItem {
                     Image(systemName: "gamecontroller")
                     Text("Games")
                 }
-            Text("Team")
+            TeamView()
                 .tabItem {
                     Image(systemName: "person.3.fill")
                     Text("Team")
                 }
-            Text("The Last Tab")
+            StatsView()
                 .tabItem {
                     Image(systemName: "list.number")
                     Text("Stats")
                 }
-            Text("The Last Tab")
+            WallView()
                 .tabItem {
                     Image(systemName: "bubble.right.fill")
                     Text("Wall")

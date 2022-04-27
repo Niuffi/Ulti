@@ -12,6 +12,12 @@
 		8E024A0028172CB3008CE5F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E0249FF28172CB3008CE5F1 /* Assets.xcassets */; };
 		8E024A0328172CB3008CE5F1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E024A0228172CB3008CE5F1 /* Preview Assets.xcassets */; };
 		8E024A0B2817DA41008CE5F1 /* GamesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E024A0A2817DA41008CE5F1 /* GamesView.swift */; };
+		8E024A0D2818514C008CE5F1 /* TeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E024A0C2818514C008CE5F1 /* TeamView.swift */; };
+		8E024A0F28185333008CE5F1 /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E024A0E28185333008CE5F1 /* StatsView.swift */; };
+		8E024A1128185342008CE5F1 /* WallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E024A1028185342008CE5F1 /* WallView.swift */; };
+		8E024A14281855C3008CE5F1 /* UltiPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 8E024A13281855C3008CE5F1 /* UltiPackage */; };
+		8E1B11382819BD5700365AB3 /* GamesViewTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1B11372819BD5700365AB3 /* GamesViewTitle.swift */; };
+		8E1B113A2819BE6D00365AB3 /* GamesViewNextGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1B11392819BE6D00365AB3 /* GamesViewNextGame.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +27,11 @@
 		8E0249FF28172CB3008CE5F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E024A0228172CB3008CE5F1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8E024A0A2817DA41008CE5F1 /* GamesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesView.swift; sourceTree = "<group>"; };
+		8E024A0C2818514C008CE5F1 /* TeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamView.swift; sourceTree = "<group>"; };
+		8E024A0E28185333008CE5F1 /* StatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsView.swift; sourceTree = "<group>"; };
+		8E024A1028185342008CE5F1 /* WallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallView.swift; sourceTree = "<group>"; };
+		8E1B11372819BD5700365AB3 /* GamesViewTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesViewTitle.swift; sourceTree = "<group>"; };
+		8E1B11392819BE6D00365AB3 /* GamesViewNextGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesViewNextGame.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E024A14281855C3008CE5F1 /* UltiPackage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,8 +86,21 @@
 			children = (
 				8E0249FD28172CB1008CE5F1 /* MainView.swift */,
 				8E024A0A2817DA41008CE5F1 /* GamesView.swift */,
+				8E1B11342819BD0700365AB3 /* GamesViewWidgets */,
+				8E024A0C2818514C008CE5F1 /* TeamView.swift */,
+				8E024A0E28185333008CE5F1 /* StatsView.swift */,
+				8E024A1028185342008CE5F1 /* WallView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		8E1B11342819BD0700365AB3 /* GamesViewWidgets */ = {
+			isa = PBXGroup;
+			children = (
+				8E1B11372819BD5700365AB3 /* GamesViewTitle.swift */,
+				8E1B11392819BE6D00365AB3 /* GamesViewNextGame.swift */,
+			);
+			path = GamesViewWidgets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -94,6 +119,9 @@
 			dependencies = (
 			);
 			name = Ulti;
+			packageProductDependencies = (
+				8E024A13281855C3008CE5F1 /* UltiPackage */,
+			);
 			productName = Ulti;
 			productReference = 8E0249F828172CB0008CE5F1 /* Ulti.app */;
 			productType = "com.apple.product-type.application";
@@ -122,6 +150,9 @@
 				Base,
 			);
 			mainGroup = 8E0249EF28172CB0008CE5F1;
+			packageReferences = (
+				8E024A12281855C3008CE5F1 /* XCRemoteSwiftPackageReference "UltiPackage" */,
+			);
 			productRefGroup = 8E0249F928172CB0008CE5F1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -148,9 +179,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E024A1128185342008CE5F1 /* WallView.swift in Sources */,
+				8E1B11382819BD5700365AB3 /* GamesViewTitle.swift in Sources */,
 				8E024A0B2817DA41008CE5F1 /* GamesView.swift in Sources */,
+				8E1B113A2819BE6D00365AB3 /* GamesViewNextGame.swift in Sources */,
+				8E024A0F28185333008CE5F1 /* StatsView.swift in Sources */,
 				8E0249FE28172CB1008CE5F1 /* MainView.swift in Sources */,
 				8E0249FC28172CB1008CE5F1 /* UltiApp.swift in Sources */,
+				8E024A0D2818514C008CE5F1 /* TeamView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,6 +389,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8E024A12281855C3008CE5F1 /* XCRemoteSwiftPackageReference "UltiPackage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Niuffi/UltiPackage.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8E024A13281855C3008CE5F1 /* UltiPackage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8E024A12281855C3008CE5F1 /* XCRemoteSwiftPackageReference "UltiPackage" */;
+			productName = UltiPackage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8E0249F028172CB0008CE5F1 /* Project object */;
 }
