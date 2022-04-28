@@ -1,6 +1,13 @@
 import SwiftUI
+import UltiPackage
+
+@available(iOS 13.0, *)
+@available(macOS 10.15, *)
 
 struct MainView: View {
+    @EnvironmentObject var team: Team
+    
+    
     var body: some View {
         TabView {
             GamesView()
@@ -25,13 +32,15 @@ struct MainView: View {
                     Text("Wall")
                 }
         }
-        .font(.headline)
     }
 }
 
 struct MainView_Previews: PreviewProvider {
+    
     static var previews: some View {
+        let team = try! Team(name: "Fantasma")
         MainView()
             .preferredColorScheme(.dark)
+            .environmentObject(team)
     }
 }
