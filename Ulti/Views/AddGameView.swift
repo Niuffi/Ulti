@@ -24,7 +24,7 @@ struct AddGameView: View {
                 TextField("Tournament", text: $tournament)
                         .padding()
                 
-                DatePicker("Date", selection: $date)
+                DatePicker("Date", selection: $date, in: Date.now...)
                         .padding()
                 Button("Add game"){
                     let game = Games(context: moc)

@@ -12,3 +12,5 @@ class DataContoroller: ObservableObject {
         }
     }
 }
+
+

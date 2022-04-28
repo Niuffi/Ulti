@@ -21,6 +21,8 @@
 		8E840301281AF6EC00AEDDEE /* Games.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8E8402FF281AF6EC00AEDDEE /* Games.xcdatamodeld */; };
 		8E840303281AF79C00AEDDEE /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E840302281AF79C00AEDDEE /* DataController.swift */; };
 		8E840305281AFC5400AEDDEE /* AddGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E840304281AFC5400AEDDEE /* AddGameView.swift */; };
+		8E840307281B1B4300AEDDEE /* GamesViewLastGames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E840306281B1B4300AEDDEE /* GamesViewLastGames.swift */; };
+		8E840309281B230800AEDDEE /* GamesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E840308281B230800AEDDEE /* GamesListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		8E840300281AF6EC00AEDDEE /* Games.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Games.xcdatamodel; sourceTree = "<group>"; };
 		8E840302281AF79C00AEDDEE /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		8E840304281AFC5400AEDDEE /* AddGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGameView.swift; sourceTree = "<group>"; };
+		8E840306281B1B4300AEDDEE /* GamesViewLastGames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesViewLastGames.swift; sourceTree = "<group>"; };
+		8E840308281B230800AEDDEE /* GamesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +99,7 @@
 				8E0249FD28172CB1008CE5F1 /* MainView.swift */,
 				8E024A0A2817DA41008CE5F1 /* GamesView.swift */,
 				8E840304281AFC5400AEDDEE /* AddGameView.swift */,
+				8E840308281B230800AEDDEE /* GamesListView.swift */,
 				8E1B11342819BD0700365AB3 /* GamesViewWidgets */,
 				8E024A0C2818514C008CE5F1 /* TeamView.swift */,
 				8E024A0E28185333008CE5F1 /* StatsView.swift */,
@@ -108,6 +113,7 @@
 			children = (
 				8E1B11372819BD5700365AB3 /* GamesViewTitle.swift */,
 				8E1B11392819BE6D00365AB3 /* GamesViewNextGame.swift */,
+				8E840306281B1B4300AEDDEE /* GamesViewLastGames.swift */,
 			);
 			path = GamesViewWidgets;
 			sourceTree = "<group>";
@@ -192,12 +198,14 @@
 				8E1B11382819BD5700365AB3 /* GamesViewTitle.swift in Sources */,
 				8E024A0B2817DA41008CE5F1 /* GamesView.swift in Sources */,
 				8E1B113A2819BE6D00365AB3 /* GamesViewNextGame.swift in Sources */,
+				8E840307281B1B4300AEDDEE /* GamesViewLastGames.swift in Sources */,
 				8E840305281AFC5400AEDDEE /* AddGameView.swift in Sources */,
 				8E840301281AF6EC00AEDDEE /* Games.xcdatamodeld in Sources */,
 				8E840303281AF79C00AEDDEE /* DataController.swift in Sources */,
 				8E024A0F28185333008CE5F1 /* StatsView.swift in Sources */,
 				8E0249FE28172CB1008CE5F1 /* MainView.swift in Sources */,
 				8E0249FC28172CB1008CE5F1 /* UltiApp.swift in Sources */,
+				8E840309281B230800AEDDEE /* GamesListView.swift in Sources */,
 				8E024A0D2818514C008CE5F1 /* TeamView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

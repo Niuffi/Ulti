@@ -1,8 +1,6 @@
 import SwiftUI
 
 struct GamesView: View {
-    @Environment(\.managedObjectContext) var moc
-    @FetchRequest(sortDescriptors: []) var games: FetchedResults<Games>
     
     var body: some View {
         NavigationView{
@@ -12,14 +10,20 @@ struct GamesView: View {
                 HStack{
                     NavigationLink(destination: AddGameView()){
                         HStack {
-                            Image(systemName: "plus")
-                            Text("ADD GAME")
+                        Image(systemName: "plus")
+                        Text("ADD GAME")
                         }
                     }
-                }
-                List(games) { game in
-                    Text(game.opponent ?? "Load Error")
-                }
+                    Spacer()
+                        .frame(width: 40.0)
+                    NavigationLink(destination: GamesListView()){
+                        HStack {
+                        Image(systemName: "list.bullet")
+                        Text("GAME LIST")
+                        }
+                    }
+                }.padding()
+                GamesViewLastGames()
                 
                 Spacer()
             }
