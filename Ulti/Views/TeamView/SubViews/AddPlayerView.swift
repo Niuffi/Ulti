@@ -13,18 +13,20 @@ struct AddPlayerView: View {
     @State private var name: String = ""
     @State private var surname: String = ""
     @State private var number: Int = 0
+    @State private var gender: Bool = true
     var body: some View {
         VStack{
             Form{
                 TextField("Name", text: $name)
-                        .padding()
-                
                 TextField("Surname", text: $surname)
-                        .padding()
                 Picker("Number", selection: $number) {
-                    ForEach(1...100, id: \.self) { number in
+                    ForEach(0...100, id: \.self) { number in
                         Text("\(number)")
                     }
+                }
+                Picker(selection: $gender, label: Text("Gender")) {
+                    Text("Male").tag(true)
+                    Text("Female").tag(false)
                 }
                 
                 Button("Add Player"){
@@ -32,6 +34,7 @@ struct AddPlayerView: View {
                     player.surname = surname
                     player.name = name
                     player.number = Int16(number)
+                    player.gender = gender
                     try? moc.save()
                     presentationMode.wrappedValue.dismiss()
                 }

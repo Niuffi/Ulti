@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "UltiPackage",
+        "repositoryURL": "https://github.com/Niuffi/UltiPackage.git",
+        "state": {
+          "branch": "main",
+          "revision": "8e528170ebe61643d9e5edc81cde640f640bebb8",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}

@@ -14,18 +14,11 @@ struct AddGameView: View {
     @State private var tournament: String = ""
     @State var date: Date = Date()
     var body: some View {
-        
         VStack{
-            
             Form{
                 TextField("Opponent", text: $opponent)
-                        .padding()
-                
                 TextField("Tournament", text: $tournament)
-                        .padding()
-                
                 DatePicker("Date", selection: $date, in: Date.now...)
-                        .padding()
                 Button("Add game"){
                     let game = Games(context: moc)
                     game.tournament = tournament
@@ -38,10 +31,7 @@ struct AddGameView: View {
                     presentationMode.wrappedValue.dismiss()
                 }
             }
-            
-            
             Spacer()
-            
         }.navigationBarTitle(Text("New Game"))
     }
 }

@@ -20,7 +20,7 @@ struct TeamView: View {
             VStack {
                 List {
                     ForEach(players, id: \.self) { player in
-                        Text("\(player.name ?? "") \(player.surname ?? "") \(player.number)")
+                        Text("\(playerNumberToString(number: player.number)) \(player.name ?? "") \(player.surname ?? "")")
                     }.onDelete(perform: removePlayer)
                 }
                 NavigationLink(destination: AddPlayerView()){
@@ -44,6 +44,15 @@ struct TeamView: View {
             } catch {
                 // handle the Core Data error
             }
+        }
+    }
+    
+    func playerNumberToString(number: Int16) -> String{
+        if number < 10 {
+            return "#0\(number)"
+        }
+        else {
+            return "#\(number)"
         }
     }
 }
