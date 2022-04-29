@@ -13,7 +13,7 @@ struct GamesListView: View {
     @FetchRequest(
         entity: Games.entity(),
         sortDescriptors: [
-            NSSortDescriptor(keyPath: \Games.opponent, ascending: true),
+            NSSortDescriptor(keyPath: \Games.date, ascending: true),
         ]
     ) var games: FetchedResults<Games>
     
@@ -24,9 +24,7 @@ struct GamesListView: View {
             ForEach(games, id: \.self) { game in
                 Text("\(game.opponent ?? "") \(game.ourPoints):\(game.enemyPoints)")
             }.onDelete(perform: removeGame)
-        }
-            
-            .navigationBarTitle(Text("Game List"))
+        }.navigationBarTitle(Text("Game List"))
     }
     
     func removeGame(at offsets: IndexSet) {
