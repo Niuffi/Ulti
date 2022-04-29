@@ -24,9 +24,6 @@ struct GamesViewLastGames: View {
                     }
                 }
             }
-            List(games) { game in
-                Text(game.opponent ?? "Load Error")
-            }
         }
     }
 }

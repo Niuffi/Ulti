@@ -1,9 +1,6 @@
 import SwiftUI
 import UltiPackage
 
-@available(iOS 13.0, *)
-@available(macOS 10.15, *)
-
 struct MainView: View {
     @EnvironmentObject var team: Team
     
