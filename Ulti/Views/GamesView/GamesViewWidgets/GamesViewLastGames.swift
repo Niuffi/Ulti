@@ -19,7 +19,7 @@ struct GamesViewLastGames: View {
             }
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 10) {
-                    ForEach(games, id: \.self) { game in
+                    ForEach(games, id: \.id) { game in
                         CircleView(opponent: game.opponent ?? "", ourScore: Int(game.ourPoints), enemyScore: Int(game.enemyPoints))
                     }
                 }

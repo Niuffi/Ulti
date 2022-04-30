@@ -27,6 +27,7 @@ struct AddGameView: View {
                     game.ourPoints = 0
                     game.enemyPoints = 0
                     game.ended = false
+                    game.id = UUID()
                     try? moc.save()
                     presentationMode.wrappedValue.dismiss()
                 }

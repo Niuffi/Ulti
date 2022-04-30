@@ -35,6 +35,7 @@ struct AddPlayerView: View {
                     player.name = name
                     player.number = Int16(number)
                     player.gender = gender
+                    player.id = UUID()
                     try? moc.save()
                     presentationMode.wrappedValue.dismiss()
                 }

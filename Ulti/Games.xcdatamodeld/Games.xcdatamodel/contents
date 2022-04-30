@@ -1,21 +1,30 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19574" systemVersion="20G527" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Events" representedClassName="Events" syncable="YES" codeGenerationType="class">
+        <attribute name="game" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="player" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="time" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="type" optional="YES" attributeType="String"/>
+    </entity>
     <entity name="Games" representedClassName="Games" syncable="YES" codeGenerationType="class">
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="ended" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="enemyPoints" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="opponent" optional="YES" attributeType="String"/>
         <attribute name="ourPoints" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="tournament" optional="YES" attributeType="String"/>
     </entity>
     <entity name="Players" representedClassName="Players" syncable="YES" codeGenerationType="class">
         <attribute name="gender" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="number" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="surname" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="Games" positionX="-63" positionY="-18" width="128" height="119"/>
-        <element name="Players" positionX="-63" positionY="27" width="128" height="89"/>
+        <element name="Games" positionX="-63" positionY="-18" width="128" height="134"/>
+        <element name="Players" positionX="-63" positionY="27" width="128" height="104"/>
+        <element name="Events" positionX="-63" positionY="45" width="128" height="89"/>
     </elements>
 </model>
