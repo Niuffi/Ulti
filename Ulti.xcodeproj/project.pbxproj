@@ -15,7 +15,6 @@
 		8E024A0D2818514C008CE5F1 /* TeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E024A0C2818514C008CE5F1 /* TeamView.swift */; };
 		8E024A0F28185333008CE5F1 /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E024A0E28185333008CE5F1 /* StatsView.swift */; };
 		8E024A1128185342008CE5F1 /* WallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E024A1028185342008CE5F1 /* WallView.swift */; };
-		8E024A14281855C3008CE5F1 /* UltiPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 8E024A13281855C3008CE5F1 /* UltiPackage */; };
 		8E134859281C050F00B39666 /* AddPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E134858281C050F00B39666 /* AddPlayerView.swift */; };
 		8E1B11382819BD5700365AB3 /* GamesViewTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1B11372819BD5700365AB3 /* GamesViewTitle.swift */; };
 		8E1B113A2819BE6D00365AB3 /* GamesViewNextGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1B11392819BE6D00365AB3 /* GamesViewNextGame.swift */; };
@@ -55,7 +54,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E024A14281855C3008CE5F1 /* UltiPackage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,7 +206,6 @@
 			);
 			name = Ulti;
 			packageProductDependencies = (
-				8E024A13281855C3008CE5F1 /* UltiPackage */,
 			);
 			productName = Ulti;
 			productReference = 8E0249F828172CB0008CE5F1 /* Ulti.app */;
@@ -239,7 +236,6 @@
 			);
 			mainGroup = 8E0249EF28172CB0008CE5F1;
 			packageReferences = (
-				8E024A12281855C3008CE5F1 /* XCRemoteSwiftPackageReference "UltiPackage" */,
 			);
 			productRefGroup = 8E0249F928172CB0008CE5F1 /* Products */;
 			projectDirPath = "";
@@ -485,25 +481,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		8E024A12281855C3008CE5F1 /* XCRemoteSwiftPackageReference "UltiPackage" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Niuffi/UltiPackage.git";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		8E024A13281855C3008CE5F1 /* UltiPackage */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 8E024A12281855C3008CE5F1 /* XCRemoteSwiftPackageReference "UltiPackage" */;
-			productName = UltiPackage;
-		};
-/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		8E8402FF281AF6EC00AEDDEE /* Games.xcdatamodeld */ = {
