@@ -23,6 +23,7 @@
 		8E840305281AFC5400AEDDEE /* AddGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E840304281AFC5400AEDDEE /* AddGameView.swift */; };
 		8E840307281B1B4300AEDDEE /* GamesViewLastGames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E840306281B1B4300AEDDEE /* GamesViewLastGames.swift */; };
 		8E840309281B230800AEDDEE /* GamesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E840308281B230800AEDDEE /* GamesListView.swift */; };
+		8ED7D983281E8F0D00C78411 /* UltiPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 8ED7D982281E8F0D00C78411 /* UltiPackage */; };
 		8EFF48E8281DA9B7007B79A1 /* ScoresGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFF48E7281DA9B7007B79A1 /* ScoresGameView.swift */; };
 		8EFF48EB281DC2D6007B79A1 /* StatsViewTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFF48EA281DC2D6007B79A1 /* StatsViewTimer.swift */; };
 /* End PBXBuildFile section */
@@ -54,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8ED7D983281E8F0D00C78411 /* UltiPackage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,6 +208,7 @@
 			);
 			name = Ulti;
 			packageProductDependencies = (
+				8ED7D982281E8F0D00C78411 /* UltiPackage */,
 			);
 			productName = Ulti;
 			productReference = 8E0249F828172CB0008CE5F1 /* Ulti.app */;
@@ -236,6 +239,7 @@
 			);
 			mainGroup = 8E0249EF28172CB0008CE5F1;
 			packageReferences = (
+				8ED7D981281E8F0D00C78411 /* XCRemoteSwiftPackageReference "UltiPackage" */,
 			);
 			productRefGroup = 8E0249F928172CB0008CE5F1 /* Products */;
 			projectDirPath = "";
@@ -481,6 +485,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8ED7D981281E8F0D00C78411 /* XCRemoteSwiftPackageReference "UltiPackage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Niuffi/UltiPackage.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8ED7D982281E8F0D00C78411 /* UltiPackage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8ED7D981281E8F0D00C78411 /* XCRemoteSwiftPackageReference "UltiPackage" */;
+			productName = UltiPackage;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		8E8402FF281AF6EC00AEDDEE /* Games.xcdatamodeld */ = {

@@ -8,29 +8,22 @@
 import SwiftUI
 
 struct ScoresGameView: View {
+    @Environment(\.managedObjectContext) var moc
+    @FetchRequest(
+        entity: Players.entity(),
+        sortDescriptors: [
+            NSSortDescriptor(keyPath: \Players.number, ascending: true),
+        ]
+    ) var players: FetchedResults<Players>
     
     @State var ourScore = 0
     @State var enemyScore = 0
     @State var gameStart = Date()
     @State var start = false
-    @State var players = [Player]()
+    @State var playersList = [Player]()
     @State var line = [Player]()
-    
-    init() {
-        @Environment(\.managedObjectContext) var moc
-        @FetchRequest(
-            entity: Players.entity(),
-            sortDescriptors: [
-                NSSortDescriptor(keyPath: \Players.number, ascending: true),
-            ]
-        ) var players: FetchedResults<Players>
-        
-        for player in players {
-            let newPlayer = Player(id: player.id ?? UUID(), name: player.name ?? "", surname: player.surname ?? "", number: Int(player.number), gender: player.gender)
-            self.players.append(newPlayer)
-        }
-        
-    }
+    @State var withDisk: Int16 = 100
+    @State var offence = true
     
     var body: some View {
         VStack{
@@ -43,16 +36,86 @@ struct ScoresGameView: View {
                     StatsViewTimer(gameStart: gameStart)
                 }
                 else {
-                    Text("00:00").font(.title)
+                    Text("00:00")
+                        .font(.title)
                 }
                 Spacer()
                 Text(String(enemyScore))
                     .padding()
                     .font(.title)
             }
-            List(players, id: \.number) { player in
-                Text("\(player.number) \(player.name) \(player.surname)")
+            HStack{
+                if !offence {
+                    Button("Enemy score") {
+                        offence = true
+                        enemyScore = enemyScore + 1
+                    }.buttonStyle(PlainButtonStyle())
+                    Button("Enemy throwaway") {
+                        offence = true
+                    }.buttonStyle(PlainButtonStyle())
+                }
+                else {
+                    Button("Enemy Callahan"){
+                        enemyScore = enemyScore + 1
+                    }.buttonStyle(PlainButtonStyle())
+                }
             }
+            List {
+                ForEach(players, id: \.number) { player in
+                    HStack{
+                        Text("\(player.surname ?? "")")
+                        Spacer()
+                        if offence {
+                            if player.number == withDisk {
+                                Button("Throw away") {
+                                    withDisk = 100
+                                    offence = false
+                                }.buttonStyle(PlainButtonStyle())
+                                Button("Blocked") {
+                                    withDisk = 100
+                                    offence = false
+                                }.buttonStyle(PlainButtonStyle())
+                                
+                            }
+                            else if withDisk == 100 {
+                                Button("Pick up") {
+                                    withDisk = player.number
+                                }.buttonStyle(PlainButtonStyle())
+                            }
+                            else {
+                                
+                                Button("Drop") {
+                                    withDisk = 100
+                                    offence = false
+                                }.buttonStyle(PlainButtonStyle())
+                                Button("Goal") {
+                                    ourScore = ourScore + 1
+                                    offence = false
+                                    withDisk = 100
+                                }.buttonStyle(PlainButtonStyle())
+                                Button("Catch") {
+                                    withDisk = player.number
+                                }.buttonStyle(PlainButtonStyle())
+                            }
+                        }
+                        else {
+                            Button("D") {
+                                offence = true
+                            }.buttonStyle(PlainButtonStyle())
+                            Button("Callahan"){
+                                ourScore = ourScore + 1
+                                offence = false
+                            }.buttonStyle(PlainButtonStyle())
+                            Button("Takeover"){
+                                offence = true
+                                withDisk = player.number
+                            }.buttonStyle(PlainButtonStyle())
+                        }
+                    }
+                }
+            }
+            
+            Spacer()
             Button("Start Game"){
                 gameStart = Date()
                 start = true
